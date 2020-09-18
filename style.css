@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+}
+html {
+  font-size: 77%;
+  /* Usually font-size:62.%;will set 1rem=10px but not in monospace font family.In case of monospace to set 1rem=10px;we have to use font-size:77% */
+}
+:root {
+  --primary-background-color: #faf9f8;
+  --white-color: white;
+}
+body {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-background-color);
+}
+.container {
+  width: 45rem;
+  height: 50rem;
+  padding: 2rem;
+  line-height: 1.4;
+  box-shadow: 0 0 1.5rem 0.1rem rgba(0, 0, 0, 0.5);
+  background-color: var(--white-color);
+}
+.container h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+.container .score-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 2rem 0 2rem;
+}
+.score {
+  font-size: 1.5rem;
+  background-color: black;
+  color: white;
+  padding: 0.5rem 1rem;
+}
+output {
+  visibility: hidden;
+  display: block;
+  width: 100%;
+  margin: 2rem auto;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 600;
+}
+.image-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 9rem 5rem 0 5rem;
+}
+.image {
+  font-size: 7rem;
+}
+.player-image i {
+  transform: rotate(90deg);
+}
+.player-image i.fa-hand-scissors {
+  transform: scale(-1, 1);
+}
+.computer-image i.fa-hand-scissors {
+  transform: scale(1, 1);
+}
+.computer-image i {
+  /* Code from stackoverflow */
+  transform: scale(-1, 1) rotate(90deg);
+}
+.extra-paragraph {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: underline;
+  text-align: center;
+}
+.footer {
+  margin-top: 2rem;
+}
+.options-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+.options {
+  color: white;
+  background-color: black;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+.animation {
+  animation: moves 1s linear 2;
+}
+
+@keyframes moves {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@media only screen and (max-width: 455px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media only screen and (max-width: 315px) {
+  html {
+    font-size: 45%;
+  }
+}
+
+/* Pramesh Karki */
